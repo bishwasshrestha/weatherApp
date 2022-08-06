@@ -1,0 +1,18 @@
+.country-Info {
+  width: 400px; 
+  height: fit-content; 
+  padding: 10px; 
+  
+}
+.country-details {
+  max-height: fit-content;  
+  padding: 5px;  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start; 
+}
+.country-details img{
+  margin: 10px;
+  min-width: fit-content;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
