@@ -6,8 +6,9 @@ import ExpandedView from "./Components/ExpandedView";
 import Search from './Components/Search'
 import WeatherData from "./Components/WeatherData";
 
+
 const App = () => {
-  const [countries, setCountries] = useState([]);   
+  const [countries, setCountries] = useState(['Nepal']);   
   const [showAll, setShowAll] = useState(true); 
   const [search, setSearch] = useState([]); 
  
@@ -19,7 +20,7 @@ const App = () => {
         console.log("promise fullfilled");
         setCountries(response.data);
       });
-  }, []);
+  }, []); 
  
 
   const showExpandedview = ({ data }) => {
@@ -29,8 +30,7 @@ const App = () => {
   var showCountries = showAll ? countries : search;
   
   return (
-    <div>
-      <h1>Hello World</h1>
+    <div className="app-view">    
       <Search countries={countries} setShowAll={setShowAll} setSearch={setSearch}/>
       <ul>
         {showAll? (
@@ -45,7 +45,8 @@ const App = () => {
             ? (
               <div>
                 <ExpandedView value={showCountries[0]} />
-                <WeatherData country={showCountries[0]}/> 
+                <WeatherData country={showCountries[0]}/>              
+
               </div>) 
             : ( 
               showCountries.map((data, i) => {

@@ -1,0 +1,20 @@
+.daily-data {
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  width: 70%; 
+  margin-top: 50px; 
+  display: flex;
+  flex-direction: row;
+}
+
+.daily {
+  border: 1px solid black;
+  width: fit-content; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+

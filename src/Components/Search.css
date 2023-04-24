@@ -2,7 +2,7 @@
 .search-bar {   
   width: 300px;
   padding: 1px;
-  margin: 10px;
+  margin: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

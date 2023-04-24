@@ -1,6 +1,7 @@
 import React from "react";
 import Country from "./Country";
 import "./ExpandedView.css";
+
 const ExpandedView = ({ value }) => {
   return (
     <div className="country-Info">
@@ -44,8 +45,8 @@ const ExpandedView = ({ value }) => {
         <div>
           <img src={value.flag} alt="flag" width="200px"></img>
         </div>
-      </div>
-    </div>
+      </div> 
+    </div> 
   );
 };
 export default ExpandedView;

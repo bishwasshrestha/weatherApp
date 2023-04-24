@@ -3,7 +3,7 @@ import { useState } from 'react';
 import "./Search.css";
 
 const Search = ({countries, setShowAll, setSearch}) => {  
-  const [newSearch, setNewSearch] = useState("");  
+  const [newSearch, setNewSearch] = useState("Nepal");  
   const handleSearchInput = () => {
     const findings = countries.filter((nation) =>
       nation.name.toLowerCase().includes(newSearch.toLowerCase())
