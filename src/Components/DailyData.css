@@ -1,20 +1,40 @@
 .daily-data {
   position: absolute;
-  top: 200px;
-  left: 40px;
-  width: 70%; 
-  margin-top: 50px; 
+  top: 50px;
+  left: 400px;
+  padding: 0;
+  width: fit-content;
   display: flex;
-  flex-direction: row;
+  /* border: 1px solid black; */
 }
 
 .daily {
-  border: 1px solid black;
-  width: fit-content; 
-  padding: 20px;
+  width: 200px;
+  padding-left: 20px;
+  padding-top: 10px;  
+  margin: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: left;
-}
 
+  color: white;  
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px black;
+
+  /* background: url('../weatherdata/bg-image');  */
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)),
+    url("../weatherdata/bg-image");
+
+  /* add blur effect */
+  filter: blur(18px);
+  -webkit-filter: blur();
+
+  /* center and scale the image nicely */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+    
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);  
+}

@@ -3,35 +3,38 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./WeatherData.css";
 import DailyData from "./DailyData";
+import Map from './Map'
+// import CityView from "./CityView";
+
 const WeatherData = ({ country }) => {
-  const [weatherData, setWeatherData] = useState();  
+
+  const [weatherData, setWeatherData] = useState('');   
 
   useEffect(() => {
-    const coordinates = [country.latlng[0], country.latlng[1]];
+    const coordinates = [country.latlng[0],country.latlng[1]];      
     const api_key = process.env.REACT_APP_API_KEY;
     const unit = "metric"
     const URL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&units=${unit}&exclude=minutely,hourly&appid=${api_key}`;
-  
+
     axios
       .get(URL)
       .then((response) => {
         console.log("weather data recieved!");
         setWeatherData(response);      
       })
-      .catch(err=>{console.log(err)})   
-  }, [country]); 
- 
+      .catch(err=>{console.log('axios error:',err)});  
+      
+    }, [country]);
 
   return (
     <div className="weather_tab">
-      <div className="weather-heading">
-        <h2>Weather in {country.capital}</h2>
-      </div>
+      {/* if weather data is available, it should display basic weather information about this country */}
+      <div>
       {        
         weatherData ? (
-          <div className="weather-info">
+          <div className="weather-info">            
             <div>
-              Current temperature {weatherData.data.current.temp} Celcius
+              Current temperature {weatherData.data.current.temp}&deg;C
             </div>
             <div>
               <img
@@ -40,16 +43,21 @@ const WeatherData = ({ country }) => {
               />
             </div>
             <div>{weatherData.data.current.weather[0].main}</div>
-            <div> Wind speed {weatherData.data.current.wind_speed} m/s</div>   
+            <div> Wind speed {weatherData.data.current.wind_speed} m/s</div>  
+
+            {/* Display 5 days forcast  */}
             <div className="dailt-forcast">
-              <DailyData value={weatherData}/>        
+              <DailyData value={weatherData}/>                    
+            </div>        
+
+            <div className="map">
+              <Map value={country}/>
             </div>
           </div>
-        ) : (
-          <div>data not available</div>
-        )
+        ) : <div></div>
         //once weather data is recieved, it should be shown here as a return package for weatherData component
       }
+      </div>     
     </div>
   )
 };
