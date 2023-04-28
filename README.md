@@ -1,6 +1,7 @@
 # Overview
-  Weather applicationf for countries around the world
-![image](https://user-images.githubusercontent.com/29711192/234122356-8fdf9bae-0ad0-48e8-9c54-83ce39f20a2d.png)
+  Weather application for countries around the world
+![image](https://user-images.githubusercontent.com/29711192/234867774-12c82656-aae5-4443-8dd1-9eac6b6bddb1.png)
+
 
 # Features
   - List of [countries](https://restcountries.com/v2/all) around the world
