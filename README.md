@@ -1,14 +1,23 @@
 # Overview
   Weather application for countries around the world
-![image](https://user-images.githubusercontent.com/29711192/234867774-12c82656-aae5-4443-8dd1-9eac6b6bddb1.png)
+
+## Screenshot
+
+   <img src="https://github.com/bishwasshrestha/weatherApp/blob/master/public/images/searchPage.PNG"
+      alt="searchPage"
+      width="400"
+      height="300"
+      border="1"/> <img src="https://github.com/bishwasshrestha/weatherApp/blob/master/public/images/frontpage.PNG"
+    alt="Screenshot 1"
+    width="500"
+    height="200"/>    
 
 
-# Features
-  - List of [countries](https://restcountries.com/v2/all) around the world
-  - search for your country or any other
-  - Basic information of the nation
-  - Current Weather condition of your capital
-  - 8 days wether forcast
+# Features  
+  - search city, country or other landmark (eg. Eiffel tower, London, Espoo etc) 
+  - Current Weather condition of your location (eg. max temp, min temp, sunrise, sunset, wind speed)
+  - 5 days wether forcast
+  - Map 
   
 # Built With 
   - React
