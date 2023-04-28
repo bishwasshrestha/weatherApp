@@ -1,11 +1,11 @@
 .weather_tab{
-  width:200px;   
+  width:20vw;   
   height: fit-content; 
   margin-left: 5vw;      
   display: flex;
   flex-direction: column;  
   align-items: flex-start; 
-  padding: 5px;  
+  padding: 5px;    
 }
 
 .map{  
@@ -13,8 +13,8 @@
   height: 50vh;
   position: absolute;
   top: 90vh;  
-  right: 5vw;  
-  left: 24vw;
+  right: 1vw;  
+  left: 30vw;
   object-fit: contain;
   overflow: clip;  
   margin-top: 2vh;

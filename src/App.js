@@ -24,6 +24,7 @@ const App = () => {
   
   return (
     <div className="app-view"> 
+    {/* component that takes the query from user and returns result based on it */}
     <CityView setCountries={setCountries} setShowAll={setShowAll} setSearch={setSearch} />
      {/* <Search
         countries={countries}
@@ -32,6 +33,7 @@ const App = () => {
       />  */}
       <div className="country-list">
         <ul>
+          {/*old code that displayed list of all the countries */}
           { 
           //Before a search query is entered, showall value is true therefore application will show all countries
             // showAll ? 
@@ -44,7 +46,8 @@ const App = () => {
             //   })
             // ) 
             // :
-            // if search result has any value returned, it will modify show all to false therefore this second condition will execute
+            
+            // if showCountries has only one value it automatically goes to expanded view
              showCountries?.length === 1 ? (               
                 <div>
                   <ExpandedView value={showCountries[0]}/>   
@@ -59,7 +62,7 @@ const App = () => {
                       <span className="material-icons md18">location_on</span>
                     </div>
                     <div className="searchResult-country">
-                      <Country id={i} onClick={()=>showExpandedview({data})} value={data.display_name} />
+                      <Country id={i} onClick={()=>showExpandedview({data})} value={data.display_name} /> {/* the displayed results can be clicked to select the desired value to be expanded*/}
                     </div>
                     {/* <div className="searchResult-button">
                       <button onClick={() => showExpandedview({ data })}>

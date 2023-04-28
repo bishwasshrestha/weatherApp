@@ -1,6 +1,7 @@
 import Country from "./Country";
 import "./ExpandedView.css";
 
+// displays provided values in detailed view
 const ExpandedView = ({ value}) => {   
   return (
     <div className="country-Info">      

@@ -1,7 +1,5 @@
 import './DailyData.css'
 
-
-
 const DailyData = ({value}) =>{
   const dailydata = value.data.daily;
 
