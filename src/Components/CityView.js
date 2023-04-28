@@ -1,62 +1,34 @@
-import axios from 'axios';
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react';
 import './CityView.css';
+import GetData from '../Controller/GetData.js'
 
-export default function CityView({setSearch}) {
+export default function CityView({setCountries, setShowAll}) {
   const [citySearch, setCitySearch] = useState('');
   const [cityList, setCityList] = useState([])
 
+
+  useEffect(()=>{       
+    GetData(citySearch, {setCityList})       
+  },[citySearch])
+
   const handleChange = (e)=>{
-    e.preventDefault() 
-    setCitySearch(e.target.value)
+    setCitySearch('')
+    e.preventDefault() ;     
+    const searchInput = e.target.value;
+    setCitySearch(searchInput);
   }
-
-  const handleCityClick = ({city}) => {
-   console.log(city);
-    setCitySearch(city)
+  
+  const handleSearch = () =>{ 
+    setCountries(cityList)
+    setShowAll(true);      
   }
-  //Api domain
-const URL = "https://nominatim.openstreetmap.org/search?"
-
-
-const handleSearch = () =>{
-  //api parameters 
-  const params = {
-    q:citySearch,
-    format:'json',
-    addressdetails:1,
-    polygon_geojson:0
-  }
-  const queryString = new URLSearchParams(params).toString();
-  const requestMethod = {   
-    method:'GET',
-    redirect:'follow'  
-  }
-
-  axios(`${URL}${queryString}`, requestMethod)
-  .then(response => setCityList(response.data)) 
-  .catch(err => console.log('axios error:', err))  
-}
 
   return (
     <div className='city-View'>
     <div className='city-Search'>
-      <input name='citySearch' value={citySearch} onChange={handleChange} placeholder='Search by City Name'/>
+      <input name='citySearch' value={citySearch.display_name} onChange={handleChange} placeholder='Search by City Name'/>
       <button onClick={handleSearch}>Search</button>      
+    </div>   
     </div>
-    <div className='city-List'>
-      <ul>
-      {
-        cityList ?
-        (
-          cityList.map((city,i) => {
-            return (<li id={i} onClick={()=>handleCityClick({city})}>{city?.display_name}</li>)
-          })
-        )        
-        : <></>
-      }
-      </ul>
-    </div>
-    </div>
-  )
+  );
 }

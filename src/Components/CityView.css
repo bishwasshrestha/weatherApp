@@ -1,0 +1,30 @@
+.city-View{
+  display: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 10vh;      
+  margin: 0;    
+}
+
+.city-Search{ 
+  width: max-content;
+  margin:3vh 40vw;
+  box-shadow: -13px -3px 18px rgba(32, 58, 202, 0.445);
+}
+.city-Search button{
+  max-width: 5vw;  
+  min-width: 100px;
+  height: 35px;  
+  border: 2px solid aqua;
+  color:white;
+  background-color: rgb(11, 151, 151);
+}
+.city-Search input{  
+  text-align: left;
+  max-width: 15vw;
+  min-width: 200px;
+  padding: 10px;  
+  border: none;  
+  background-color: aqua;  
+}

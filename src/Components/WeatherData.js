@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./WeatherData.css";
@@ -11,7 +10,7 @@ const WeatherData = ({ country }) => {
   const [weatherData, setWeatherData] = useState('');   
 
   useEffect(() => {
-    const coordinates = [country.latlng[0],country.latlng[1]];      
+    const coordinates = [country.lat,country.lon];      
     const api_key = process.env.REACT_APP_API_KEY;
     const unit = "metric"
     const URL = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates[0]}&lon=${coordinates[1]}&units=${unit}&exclude=minutely,hourly&appid=${api_key}`;

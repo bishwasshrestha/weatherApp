@@ -1,22 +1,21 @@
 .country-Info {
-  width:200px;   
+  width:20vw;   
   height: fit-content; 
   margin-top: 50px;
   margin-left: 5vw;    
   display: flex;
-  flex-direction: column; 
-  border: 1px solid black;     
+  flex-direction: column;   
 }
-.country-details {
+.country-details { 
+  width: 100%;
   max-height: fit-content;  
   display: flex;
   flex-direction: row;
-  justify-content: left;
-  padding: 5px;    
-  justify-content: flex-start;     
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;  
+  border:1px solid black;   
 }
-.country-details img{
-  margin: 10px;
-  height: 100px;
-  width: 100px;  
+.country-details div{
+  width: 60px;    
 }
