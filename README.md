@@ -39,6 +39,7 @@
   the web-app uses two different apis. you can find them on the following links
   - [OpenWeathermap](https://openweathermap.org/)
   - [Restcountries](https://restcountries.com/)
+  - [OpenStreetMap](https://openstreetmap.org)
   
   Openweathermap requires api so visit the page and get the generated api key. 
   Create a .env page and store api key on REACT_APP_API_KEY 
