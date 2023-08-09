@@ -3,14 +3,20 @@
 
 ## Screenshot
 
+Search page where user can look for a particular address.
+
    <img src="https://github.com/bishwasshrestha/weatherApp/blob/master/public/images/searchPage.PNG"
       alt="searchPage"
       width="400"
       height="300"
-      border="1"/> <img src="https://github.com/bishwasshrestha/weatherApp/blob/master/public/images/frontpage.PNG"
-    alt="Screenshot 1"
-    width="500"
-    height="200"/>    
+      border="1"/> 
+      
+Front page with data on searched location.
+
+<img  src="https://github.com/bishwasshrestha/weatherApp/blob/master/public/images/frontpage.PNG"
+      alt="frontpage"
+      width="500"
+      height="200"/>    
 
 
 # Features  
